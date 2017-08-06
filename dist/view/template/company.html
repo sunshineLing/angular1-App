@@ -1,0 +1,11 @@
+<!--这是position职位详情页面的模板模块，点击公司信息的时候，又会跳转到公司详情页面company路由部分-->
+
+<!--公司页面模板-->
+<div class="bg-w company-info p-r" ui-sref="company({id:1})">
+    <!--作用域com属性对应的值-->
+    <img ng-src="{{com.imageUrl}}" alt="" class="p-a">
+    <p ng-bind="com.name">
+    </p>
+    <p ng-bind="com.industry+'/'+com.state+'/'+com.people">
+    </p>
+</div>

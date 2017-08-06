@@ -1,0 +1,17 @@
+<div class="search-bar ta-c">
+    <!--点击取消，先把name设置为空，再调用search()方法-->
+    <button ng-click="name=''; search()">取消</button>
+    <input ng-model="name" type="text" placeholder="搜索职位/公司/城市">
+    <button ng-click="search()" class="ta-l">搜索</button>
+</div>
+
+<!--向子组件传递list数据，传递tabClick事件，由子组件传入，id和name-->
+<div app-tab list="tabList" tab-click='tClick(id, name)'></div>
+
+<!--复用组件,显示对应筛选条件的职位列表信息-->
+<div app-position-list data="positionList" filter-obj="filterObj" class="search-list"></div>
+
+<div app-foot></div>
+
+<!--弹框组件,点击列表项时，向父组件传递了当前项item-->
+<div app-sheet list="sheet.list" visible="sheet.visible" select="sClick(id, name)"></div>

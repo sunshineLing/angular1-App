@@ -1,0 +1,86 @@
+@import 'template/head.less';
+@import 'template/foot.less';
+@import 'template/positionList.less';
+@import 'position.less';
+@import 'template/positionInfo.less';
+@import 'template/company.less';
+@import 'template/positonClass.less';
+@import 'search.less';
+@import 'template/tab.less';
+@import 'template/sheet.less';
+@import 'login.less';
+@import 'register.less';
+@import 'me.less';
+@import 'post.less';
+
+.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.ng-enter-active {
+  opacity: 1;
+}
+
+// 不同宽度适配
+.fs(@px) {
+    font-size: unit(@px / 37.5, rem);
+}
+
+// 宽高适配
+.w(@px) {
+    width: unit(@px / 37.5, rem);
+}
+
+.h(@px) {
+    height: unit(@px / 37.5, rem);
+}
+
+// 行高
+.lh(@px) {
+    line-height: unit(@px / 37.5, rem);
+}
+
+// 上下左右边距margin
+.mt(@px) {
+  margin-top: unit(@px / 37.5, rem);
+}
+.ml(@px) {
+  margin-left: unit(@px / 37.5, rem);
+}
+.mr(@px) {
+  margin-right: unit(@px / 37.5, rem);
+}
+.mb(@px) {
+  margin-bottom: unit(@px / 37.5, rem);
+}
+
+// 上下左右边距 padding
+.pt(@px) {
+  padding-top: unit(@px / 37.5, rem);
+}
+.pl(@px) {
+  padding-left: unit(@px / 37.5, rem);
+}
+.pr(@px) {
+  padding-right: unit(@px / 37.5, rem);
+}
+.pb(@px) {
+  padding-bottom: unit(@px / 37.5, rem);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body {
+  background-color: @bodyBgColor;
+  .fs(16);
+}
+
+// 详情页面底部的button按钮样式
+button {
+  border-width: 0;
+  outline-width: 0;
+}

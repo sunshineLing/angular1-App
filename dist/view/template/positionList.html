@@ -1,0 +1,13 @@
+<ul class="bg-w position-list">
+    <!--用ng-repeat遍历数组data,data的数据又是mainCtrl里面的list数组-->
+    <!--点击职位的时候跳转到详情页面，跳转的时候，将id作为参数传递过去，路由里面会匹配到id-->
+    <li ui-sref="position({id:item.id})" class="item p-r" ng-repeat="item in data | filterByObj:filterObj">
+        <img ng-src="{{item.imageUrl}}" alt="" class="f-l logo">
+        <h3 class="title" ng-bind="item.name"></h3>
+        <p class="text" ng-bind="item.companyName+'['+item.cityName+']'+' '+item.industryName +' '+item.scaleName"></p>
+        <p class="text c-r" ng-bind="item.salaryName"></p>
+        <p class="text" ng-bind="item.date"></p>
+        <span ng-if="isFavorite" ng-click="$event.stopPropagation();select(item);" class="p-a icon {{item.select?'star-active':'star'}}"></span>
+        <div class="clear"></div>
+    </li>
+</ul>

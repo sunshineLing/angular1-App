@@ -1,0 +1,16 @@
+<!--从main页的positionList职位上点击进入，进入的公司详情页面-->
+<!--此处的text与指令里面的text绑定-->
+<div app-head-bar text="职位详情"></div>
+<!--和详情页面绑定-->
+<div app-position-info pos="position" is-login="isLogin"></div>
+<!--公司,关联的指令是模板里面到的appCompany-->
+<div app-company com="company"></div>
+
+<!--职位描述-->
+<div class="bg-w position-desc">
+  <h5>职位描述</h5>
+  <pre class="ta-l" ng-bind="position.description">
+  </pre>
+</div>
+<!--底部投递简历或登陆按钮-->
+<button class="bottom-btn c-w" ng-click="go()" ng-bind="message"></button>
